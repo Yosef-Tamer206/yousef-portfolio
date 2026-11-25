@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yousef Tamer — Front-End Developer</title>
+<link rel="stylesheet" href="main.css">
+<style>html,body,#root{position:static!important;height:auto!important;overflow:visible!important;overflow-x:clip!important;overscroll-behavior:auto!important}html,body{margin:0;background:#fdfcfb}</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+(function () {
+  var PREFIX = 'instinct-file:portfolio:';
+  function readLocal(key) {
+    try { var v = localStorage.getItem(PREFIX + key); return v == null ? { status: 'memory' } : { status: 'saved', value: v }; }
+    catch (e) { return { status: 'memory' }; }
+  }
+  function writeLocal(key, value) {
+    try { localStorage.setItem(PREFIX + key, value); return { status: 'saved' }; }
+    catch (e) { return { status: 'memory' }; }
+  }
+  window.instinctFile = {
+    initialRoute: decodeURIComponent(location.hash.slice(1) || '/'),
+    route: function (p) {
+      if (typeof p === 'string' && p.startsWith('/') && !p.startsWith('//')) {
+        var h = '#' + encodeURIComponent(p);
+        if (location.hash !== h) history.replaceState(null, '', h);
+      }
+    },
+    asset: function (u) { return u; },
+    request: function (method, params) {
+      if (method === 'local.read') return Promise.resolve(readLocal(params && params.key));
+      if (method === 'local.write') return Promise.resolve(writeLocal(params && params.key, params && params.value));
+      return Promise.resolve({ status: 'unavailable' });
+    },
+    live: { subscribe: function () { return function () {}; }, hold: function () {}, reveal: function () {} }
+  };
+  window.addEventListener('hashchange', function () {
+    window.dispatchEvent(new CustomEvent('instinct-route', { detail: decodeURIComponent(location.hash.slice(1) || '/') }));
+  });
+})();
+</script>
+<script src="main.js" defer></script>
+</body>
+</html>
