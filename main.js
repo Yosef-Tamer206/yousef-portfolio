@@ -42,7 +42,7 @@
   ));
   var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-  // ../../skills/platform/files/render/page-kit/kit.js
+  // ../../../../skills/platform/files/render/page-kit/kit.js
   var kit_exports = {};
   __export(kit_exports, {
     Files: () => b3,
@@ -6954,7 +6954,7 @@ ${String(e6)}`), new Response(r, { status: 500, headers: { "Content-Type": "text
   }
   var import_meta, H3, Md, U3, B3, V3, W3, Rr, Jm, Y3, j, dg, te, pg, be, Sg, Dg, Py, ml, Fy, k4, R4, fM, hM, pM, mM, cx, Ot, B, V, gr, it, K, q2, na, pp, H, mr, gw, vw, pr, yl, qr, Sl, Cl, yp, $y, wl, yr, vE, wE, EE, RE, SE, CE, DE, NE, Iy, xp, bp, nr, AE, TE, FE, $E, Ba, sc, uc, Ep, lt, Nw, aa, OE, By, Fw, HE, UE, BE, $w, VE, Vi, Nl, vn, zw, Ow, Iw, Ia, ji, ra, Hi, WE, Ky, Np, Xy, JE, Tr, Xr, Ml, to, ro, Xi, t2, mt, la, It, Pp, Kr, r2, oR, lR, i2, l2, cR, c2, ep, mR, ow, sw, vR, uw, yR, qa, xR, bR, kR, b2, Gu, Ku, Bu, PR, L2, jp, Hp, Up, ec, Bp, Vp, M2, P2, Yi, cp, _2, qi, A2, dp, T2, F2, fp, $2, TR, rp, FR, zR, Vu, UR, BR, Ar, I2, xc, Wp, Wu, Qu, oS, tc, Rc, ap, xr, mw, rc, ao, gS, io, zl, Mc, yS, wS, gp, qu, Fr, lo, zc, Y4, oo, gt, w0, _S, AS, I4, Oc, Ic, x0, U4, G4, K4, jc, X4, y0, P4, tx, s8, T4, u8, F4, lx, sx, st, so, m8, X, Vl, uL, b3, Im, Je, xL, D0, Sx, Cx, P0, Gl, g8, xx, dx, v8, y8, C0, fx, w8, x8, b8, k8, E8, R8, S8, C8, bx, Pe, kx, N8, L8, M8, P8, _8, A8, T8, Dn, ca, uo, S0, Wl, F8, ue, da, $8, z8, O8, I8, j8, H8, Yl, co, U8, Ex, B8, V8, px, W8, ql, Y8, q8, G8, K8, X8, Q8, J8, Uc, L0, nC, gx, vx, lC, sC, M0, uC, _0, A0, Ve, is, fd, Cb, ma, Zc, h5, ls, Ln, wa, gd, R, Mt, _t, ge, yd, ar, li, ga, im, U, ce, T, wo, ze, Y5, Se, Ql, e3, t3, r3, de, ni, Pt, cs, ut, i3, ae, z, $r, pa, Ed, me, Nt, w3, Ce, x3, Lt, dC, wb, fC, hC, pC, mC, gC, vC, xb, bb, Or, At, cd, yC, wC, xC, bC, kC, EC, RC, SC, CC, Dx, DC, NC, LC, dd, Jc, PC, _C, um, cm, AC, Nb, IC, EL, RL, jC, Nx, V0, W0, Y0, Mx, ri, go, po, Jl, en, qC, GC, KC, XC, QC, ZC, JC, Px, Ab, Tb, rd, Fb, $b, zb, Ob, mo, Ib, n7, Ub, hm, pm, hd, ts, Ix, jx, Hx, pd, Q0, SL, CL, Z0, I0, y7, w7, b7, k7, E7, R7, Ux, $7, Xb, Vx, Yx, qx, Yc, Qb, Zb, j0, H0, ym, DL, e5, NL, t5, LL, r5, ML, n5, PL, a5, _L, i5, AL, Y7, TL, o5, q7, G7, K7, X7, Q7, Z7, FL, $L, zL, OL, IL, jL, HL, l5, J7, eD, tD, rD, nD, aD, UL, BL, VL, WL, YL, qL, GL, s5, KL, u5, XL, wm, QL, xm, ZL, Gx, pD, mD, Kx, Xx, ED, RD, SD, DD, em, tm, Qa, ND, LD, FD, $D, ID, jD, md, Mn, bm, UD, km, Em, m5, BD, oi, Rm, g5, WD, YD, v5, qD, GD, KD, XD, JD, e9, Xl, w5, eb, tb, rb, rs, u9, S5, c9, f9, H5, ti, sd, ns, h9, p9, nb, k9, E9, ab, ib, Kt, A9, T9, F9, $9, z9, O9, I9, j9, H9, U9, Gc, B0, q5, B9, sb, W9, jt, Kc, G9, X9, ub, Q9, Z5, eN, cb, nN, db, fb, om, d3, ho, ha, f3, hb, br, pb, gb, h3, yb, Rd;
   var init_kit = __esm({
-    "../../skills/platform/files/render/page-kit/kit.js"() {
+    "../../../../skills/platform/files/render/page-kit/kit.js"() {
       import_meta = {};
       H3 = Object.create;
       Md = Object.defineProperty;
@@ -14478,15 +14478,6 @@ Error generating stack: ` + i.message + `
   }
   function App() {
     return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(FileCard, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-        Header,
-        {
-          title: "Yousef Tamer",
-          fact: "Front-End Developer",
-          factKnown: true,
-          intro: "I build interfaces with Angular and JavaScript, hunt bugs for fun, and ship pages people enjoy using. From Fayoum, Egypt, to the whole web."
-        }
-      ),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pf-hero", children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pf-hero-text", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pf-eyebrow", children: "\u25B6 PRESS START" }),
@@ -14598,8 +14589,7 @@ Error generating stack: ` + i.message + `
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ButtonLink, { href: "https://www.linkedin.com/in/yousef-tamer-1053a6395", variant: "secondary", children: "LinkedIn" }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CopyButton, { text: "yoseftamer206@gmail.com", label: "Copy my email", variant: "ghost" })
         ] })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Closing, { children: "Review build, 25 Nov 2026. Not published anywhere yet. The six demos are my live GitHub Pages projects." })
+      ] })
     ] });
   }
 
