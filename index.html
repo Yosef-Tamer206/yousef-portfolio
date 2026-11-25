@@ -1,46 +1,190 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Yousef Tamer — Front-End Developer</title>
-<link rel="stylesheet" href="main.css">
-<style>html,body,#root{position:static!important;height:auto!important;overflow:visible!important;overflow-x:clip!important;overscroll-behavior:auto!important}html,body{margin:0;background:#fdfcfb}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yousef Tamer · Front-End Developer</title>
+<meta name="description" content="I build interfaces with Angular and JavaScript, hunt bugs for fun, and ship pages people enjoy using. From Fayoum, Egypt, to the whole web.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="root"></div>
-<script>
-(function () {
-  var PREFIX = 'instinct-file:portfolio:';
-  function readLocal(key) {
-    try { var v = localStorage.getItem(PREFIX + key); return v == null ? { status: 'memory' } : { status: 'saved', value: v }; }
-    catch (e) { return { status: 'memory' }; }
-  }
-  function writeLocal(key, value) {
-    try { localStorage.setItem(PREFIX + key, value); return { status: 'saved' }; }
-    catch (e) { return { status: 'memory' }; }
-  }
-  window.instinctFile = {
-    initialRoute: decodeURIComponent(location.hash.slice(1) || '/'),
-    route: function (p) {
-      if (typeof p === 'string' && p.startsWith('/') && !p.startsWith('//')) {
-        var h = '#' + encodeURIComponent(p);
-        if (location.hash !== h) history.replaceState(null, '', h);
-      }
-    },
-    asset: function (u) { return u; },
-    request: function (method, params) {
-      if (method === 'local.read') return Promise.resolve(readLocal(params && params.key));
-      if (method === 'local.write') return Promise.resolve(writeLocal(params && params.key, params && params.value));
-      return Promise.resolve({ status: 'unavailable' });
-    },
-    live: { subscribe: function () { return function () {}; }, hold: function () {}, reveal: function () {} }
-  };
-  window.addEventListener('hashchange', function () {
-    window.dispatchEvent(new CustomEvent('instinct-route', { detail: decodeURIComponent(location.hash.slice(1) || '/') }));
-  });
-})();
-</script>
-<script src="main.js" defer></script>
+
+<nav class="nav">
+  <a class="nav-logo" href="#top">YT<span>.</span></a>
+  <div class="nav-links">
+    <a href="#skills">Power-ups</a>
+    <a href="#projects">Arcade</a>
+    <a href="#game">Bug catcher</a>
+    <a href="#about">Player card</a>
+    <a class="nav-cta" href="#contact">Insert coin</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-text">
+    <p class="eyebrow">&#9654; PRESS START</p>
+    <h1>Player one: <span class="rotator" id="rotator">front-end developer</span></h1>
+    <p class="intro">I build interfaces with Angular and JavaScript, hunt bugs for fun, and ship pages people enjoy using. From Fayoum, Egypt, to the whole web.</p>
+    <div class="stats">
+      <div class="stat"><b>18</b><span>repos on GitHub</span></div>
+      <div class="stat"><b>6</b><span>live demos below</span></div>
+      <div class="stat"><b>Done</b><span>Route Academy Front-End track</span></div>
+      <div class="stat"><b>Fayoum</b><span>home base</span></div>
+    </div>
+  </div>
+  <div class="portrait">
+    <img src="assets/portrait-circle.jpg" alt="Yousef Tamer">
+    <span class="badge b1"><i class="tile" style="color:#fff;background:#dd0031">A</i> Angular</span>
+    <span class="badge b2"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="14" rx="5.5" ry="6"/><circle cx="12" cy="6" r="2.6"/><path d="M9 4.5 7 2.5M15 4.5l2-2"/><path d="M6.5 11 3 9.5M6.5 14H2.5M6.5 17 3 18.5M17.5 11 21 9.5M17.5 14h4M17.5 17l3.5 1.5"/><path d="M12 9v10"/></svg> 0 bugs*</span>
+    <span class="badge b3">EELU student</span>
+    <p class="fine">*bugs may reappear after deploy</p>
+  </div>
+</header>
+
+<main>
+
+<section class="block" id="skills">
+  <p class="kicker">Level 1</p>
+  <h2>Power-ups</h2>
+  <p class="lede">The tools I build with every day.</p>
+  <div class="skills">
+    <div class="skill"><div class="skill-head"><i class="tile" style="color:#fff;background:#dd0031">A</i><span>Angular</span></div><p>My main weapon. Components, routing, services, the whole dojo.</p></div>
+    <div class="skill"><div class="skill-head"><i class="tile" style="color:#251f21;background:#f7df1e">JS</i><span>JavaScript &amp; TypeScript</span></div><p>Where the fun happens. Vanilla JS is my comfort food.</p></div>
+    <div class="skill"><div class="skill-head"><i class="tile" style="color:#fff;background:#7c3aed">&lt;/&gt;</i><span>HTML &amp; CSS</span></div><p>Pixel-pushing since day one. Flexbox whisperer, Grid enjoyer.</p></div>
+    <div class="skill"><div class="skill-head"><svg class="ic" style="color:#0a7ea4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg><span>React</span></div><p>Second playable character. Hooks do not scare me (much).</p></div>
+    <div class="skill"><div class="skill-head"><svg class="ic" style="color:#e84d31" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><circle cx="18" cy="8" r="2.4"/><path d="M6 8.4v7.2"/><path d="M18 10.4c0 4.6-5 4.6-9.2 5.4"/></svg><span>Git &amp; GitHub</span></div><p>I commit often, and my messages mostly make sense.</p></div>
+    <div class="skill"><div class="skill-head"><svg class="ic" style="color:#b45309" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3a6 6 0 0 0-3.3 11c.7.5 1.3 1.4 1.3 2.3v.7h4v-.7c0-.9.6-1.8 1.3-2.3A6 6 0 0 0 12 3Z"/><path d="M10 20h4M11 22h2"/></svg><span>Problem solving</span></div><p>Give me a broken layout and a deadline. Watch this.</p></div>
+  </div>
+</section>
+
+<section class="block" id="projects">
+  <p class="kicker">Level 2</p>
+  <h2>The arcade</h2>
+  <p class="lede">Real projects with live demos on GitHub Pages. Insert coin. Actually, no coin needed.</p>
+
+  <article class="card">
+    <div class="card-head"><span class="num">1</span><span class="card-eyebrow">Arabic UI · booking</span></div>
+    <h3>Mal3abak · ملعبك</h3>
+    <a class="shot" href="https://yosef-tamer206.github.io/Mal3abak-Pitch-Booking/" target="_blank" rel="noopener"><img src="assets/mal3abak.png" alt="Mal3abak live demo" loading="lazy"></a>
+    <p>Football pitch booking for players and pitch owners, fully in Arabic and right-to-left. Browse pitches, filter by city, price and rating, pick a slot and book. Demo data, bookings stay in the browser.</p>
+    <p class="tags">JavaScript · RTL · localStorage</p>
+    <div class="card-links"><a href="https://yosef-tamer206.github.io/Mal3abak-Pitch-Booking/" target="_blank" rel="noopener">Play the demo</a><a href="https://github.com/Yosef-Tamer206/Mal3abak-Pitch-Booking" target="_blank" rel="noopener">Source code</a></div>
+  </article>
+
+  <article class="card">
+    <div class="card-head"><span class="num">2</span><span class="card-eyebrow">Productivity</span></div>
+    <h3>Kanban Task Manager</h3>
+    <a class="shot" href="https://yosef-tamer206.github.io/Kanban-Task-Manager/" target="_blank" rel="noopener"><img src="assets/kanban.png" alt="Kanban Task Manager live demo" loading="lazy"></a>
+    <p>A Trello-style board with three columns, priority badges, due-soon and overdue indicators. Everything is saved in the browser, no account needed.</p>
+    <p class="tags">HTML · CSS · JavaScript</p>
+    <div class="card-links"><a href="https://yosef-tamer206.github.io/Kanban-Task-Manager/" target="_blank" rel="noopener">Play the demo</a><a href="https://github.com/Yosef-Tamer206/Kanban-Task-Manager" target="_blank" rel="noopener">Source code</a></div>
+  </article>
+
+  <article class="card">
+    <div class="card-head"><span class="num">3</span><span class="card-eyebrow">Fun · recipes</span></div>
+    <h3>What's For Dinner</h3>
+    <a class="shot" href="https://yosef-tamer206.github.io/What-s-For-Dinner/" target="_blank" rel="noopener"><img src="assets/dinner.png" alt="What's For Dinner live demo, Creamy Tomato Soup recipe loaded" loading="lazy"></a>
+    <p>Cannot decide what to cook? One click picks a random recipe from 13 dishes, with ingredients, steps, chef tips, and a warning when dinner takes more than 45 minutes.</p>
+    <p class="tags">JavaScript · recipes</p>
+    <div class="card-links"><a href="https://yosef-tamer206.github.io/What-s-For-Dinner/" target="_blank" rel="noopener">Play the demo</a><a href="https://github.com/Yosef-Tamer206/What-s-For-Dinner" target="_blank" rel="noopener">Source code</a></div>
+  </article>
+
+  <article class="card">
+    <div class="card-head"><span class="num">4</span><span class="card-eyebrow">Landing site</span></div>
+    <h3>GameArena</h3>
+    <a class="shot" href="https://yosef-tamer206.github.io/Games-Website/" target="_blank" rel="noopener"><img src="assets/games.png" alt="GameArena live demo" loading="lazy"></a>
+    <p>A gaming community landing site with a bold hero, games showcase, community section and contact. My loudest page so far, and proud of it.</p>
+    <p class="tags">HTML · CSS · responsive</p>
+    <div class="card-links"><a href="https://yosef-tamer206.github.io/Games-Website/" target="_blank" rel="noopener">Play the demo</a><a href="https://github.com/Yosef-Tamer206/Games-Website" target="_blank" rel="noopener">Source code</a></div>
+  </article>
+
+  <article class="card">
+    <div class="card-head"><span class="num">5</span><span class="card-eyebrow">Health · API</span></div>
+    <h3>NutriPlan</h3>
+    <a class="shot" href="https://yosef-tamer206.github.io/NutriPlan/" target="_blank" rel="noopener"><img src="assets/nutriplan.png" alt="NutriPlan live demo" loading="lazy"></a>
+    <p>A nutrition and recipe planner: instant search, browse by cuisine or category, nutrition breakdowns per serving, a food log, and your week on a chart.</p>
+    <p class="tags">JavaScript · API · charts</p>
+    <div class="card-links"><a href="https://yosef-tamer206.github.io/NutriPlan/" target="_blank" rel="noopener">Play the demo</a><a href="https://github.com/Yosef-Tamer206/NutriPlan" target="_blank" rel="noopener">Source code</a></div>
+  </article>
+
+  <article class="card">
+    <div class="card-head"><span class="num">6</span><span class="card-eyebrow">Arabic UI · finance</span></div>
+    <h3>Mudabbir · مدبّر</h3>
+    <a class="shot" href="https://yosef-tamer206.github.io/Mudabbir---Financial-Dashboard/" target="_blank" rel="noopener"><img src="assets/mudabbir.png" alt="Mudabbir live demo" loading="lazy"></a>
+    <p>A personal finance dashboard in Arabic: balance, income vs. expenses on a chart, recent transactions and quick actions. Money UI that does not feel like homework.</p>
+    <p class="tags">Dashboard · charts · RTL</p>
+    <div class="card-links"><a href="https://yosef-tamer206.github.io/Mudabbir---Financial-Dashboard/" target="_blank" rel="noopener">Play the demo</a><a href="https://github.com/Yosef-Tamer206/Mudabbir---Financial-Dashboard" target="_blank" rel="noopener">Source code</a></div>
+  </article>
+
+  <p class="lede">Plus 12 more experiments on <a class="inline-link" href="https://github.com/Yosef-Tamer206?tab=repositories" target="_blank" rel="noopener">my GitHub</a>.</p>
+</section>
+
+<section class="block" id="game">
+  <p class="kicker">Bonus stage</p>
+  <h2>Bug catcher</h2>
+  <p class="lede">This portfolio had bugs. Now they are yours.</p>
+  <div class="game">
+    <div class="hud">
+      <span>Caught: <b id="hud-score">0</b></span>
+      <span>Time: <b id="hud-time">20</b>s</span>
+      <span>Best: <b id="hud-best">0</b></span>
+    </div>
+    <div class="arena" id="arena">
+      <button type="button" class="bug" id="bug" aria-label="Catch the bug" hidden>
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="14" rx="5.5" ry="6"/><circle cx="12" cy="6" r="2.6"/><path d="M9 4.5 7 2.5M15 4.5l2-2"/><path d="M6.5 11 3 9.5M6.5 14H2.5M6.5 17 3 18.5M17.5 11 21 9.5M17.5 14h4M17.5 17l3.5 1.5"/><path d="M12 9v10"/></svg>
+      </button>
+      <div class="overlay" id="overlay">
+        <p id="game-msg">Catch as many bugs as you can in 20 seconds.</p>
+        <button type="button" class="btn btn-primary" id="start-btn">Start</button>
+      </div>
+    </div>
+    <p class="fine">The bug speeds up when it gets scared. Best score resets when you leave the page.</p>
+  </div>
+</section>
+
+<section class="block" id="wild">
+  <p class="kicker">Side quests</p>
+  <h2>Out in the wild</h2>
+  <p class="lede">I leave my desk sometimes. Proof:</p>
+  <div class="strip">
+    <img src="assets/ev-egypt-forum-1.jpg" alt="Yousef at Egypt Forum 2026, by the Iconic Tower" loading="lazy">
+    <img src="assets/ev-egypt-forum-2.jpg" alt="Yousef at the Egypt Forum 2026 venue" loading="lazy">
+    <img src="assets/ev-police-academy-1.jpg" alt="Yousef with his Coexistence Week certificate, Police Academy" loading="lazy">
+    <img src="assets/ev-instant-1.jpg" alt="Yousef with a speaker at an Instant Software Solutions event" loading="lazy">
+    <img src="assets/ev-police-academy-4.jpg" alt="Coexistence Week group photo at the Police Academy" loading="lazy">
+  </div>
+  <p class="caption">Egypt Forum 2026 at the Iconic Tower · Coexistence Week at the Police Academy · an Instant Software Solutions event. Photos from my LinkedIn and portfolio.</p>
+</section>
+
+<section class="block" id="about">
+  <p class="kicker">Player card</p>
+  <h2>About me</h2>
+  <p class="lede">Hey, I am Yousef, a front-end developer and EELU student from Fayoum. I finished the Front-End track at Route Academy, and since then I keep shipping: booking apps, dashboards, games, and the occasional recipe picker.</p>
+  <p class="lede">I like interfaces that feel alive, code that is easy to read, and jokes in commit messages. When I am not coding, I am at a tech event, or explaining to my family what a div is.</p>
+  <p class="ar" dir="rtl" lang="ar">شغال بالحب من الفيوم ❤️</p>
+</section>
+
+<section class="block" id="contact">
+  <p class="kicker">Final boss</p>
+  <h2>Insert coin</h2>
+  <p class="lede">Want to build something together? Pick a channel. I reply faster than a re-render.</p>
+  <div class="contact">
+    <a class="btn btn-primary" href="mailto:yoseftamer206@gmail.com">Email me <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 18 18 6M9 6h9v9"/></svg></a>
+    <a class="btn" href="https://github.com/Yosef-Tamer206" target="_blank" rel="noopener">GitHub <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 18 18 6M9 6h9v9"/></svg></a>
+    <a class="btn" href="https://www.linkedin.com/in/yousef-tamer-1053a6395" target="_blank" rel="noopener">LinkedIn <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 18 18 6M9 6h9v9"/></svg></a>
+    <button class="btn btn-ghost" id="copy-btn" type="button"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg> Copy my email</button>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>Built by Yousef Tamer. The six demos are my live GitHub Pages projects.</p>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
